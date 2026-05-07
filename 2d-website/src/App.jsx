@@ -20,6 +20,8 @@ function App() {
       <div className="ticks"></div>
 
       <section id="next-steps">
+        
+        <h1>Projects</h1>
         <div id="docs">
           <svg className="icon" role="presentation" aria-hidden="true">
             <use href="/icons.svg#documentation-icon"></use>
@@ -101,7 +103,9 @@ function App() {
       </section>
 
       <div className="ticks"></div>
-      <section id="spacer"></section>
+      <section id="spacer">
+        <h1>Contact me!</h1>
+      </section>
     </>
   )
 }
