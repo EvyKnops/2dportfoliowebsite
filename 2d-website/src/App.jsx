@@ -64,14 +64,6 @@ function App() {
             </li>
             <li>
               <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
               </a>
             </li>
             <li>
