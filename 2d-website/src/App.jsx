@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
+import Logo from './assets/logo-geel-blauw.png'
 import heroImg from './assets/hero.png'
 import './App.css'
 
@@ -11,7 +11,7 @@ function App() {
     <>
       <section id="center">
         
-        <div class="SectionName">
+        <div className="SectionName">
           <h1>Evy Knops</h1>
           <p>Welcome to my Portfolio!</p>
         </div>
@@ -39,8 +39,22 @@ function App() {
         <a href="#" className="ProjectsMore">show more projects</a>
       </section>
 
-      <section class="SectionContact">
-        <h1>Contact me!</h1>
+      <section className="SectionContact">
+        <h1>Contact me</h1>
+
+        <div className="ContactGrid">
+          <div className="ContactCard">foto</div>
+          <div className="ContactCard">foto</div>
+          <div className="ContactCard">foto</div>
+        </div>
+
+        <div className="ContactFooter">
+          <span>Linkedin</span>
+          <span className="ContactLogo">
+            <img src={Logo} className="logo" alt="evy logo" />
+          </span>
+          <span>Email</span>
+        </div>
       </section>
     </>
   )

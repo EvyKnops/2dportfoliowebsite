@@ -42,7 +42,7 @@ section{
 .SectionProjects h1 {
   font-size: clamp(2rem, 2.5vw, 3rem);
   letter-spacing: 0.06em;
-  margin: 0;
+  margin: 0 0 10vh;
 }
 
 .ProjectsList {
@@ -53,9 +53,8 @@ section{
 }
 
 .ProjectItem {
-  background: rgba(255,255,255,0.05);
-  border-top: 1px solid rgba(255,255,255,0.15);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-top: 3px solid rgba(255,255,255,0.15);
+  border-bottom: 3px solid rgba(255,255,255,0.08);
   padding: 18px 20px;
 }
 
@@ -86,5 +85,69 @@ section{
   }
 }
 
+.SectionContact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 64px 24px;
+  gap: 42px;
+}
 
+.SectionContact h1 {
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  margin: 0 0 10vh 0;
+  letter-spacing: 0.04em;
+}
 
+.ContactGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 5vw;
+}
+
+.ContactCard {
+  min-height: 66vh;
+  min-width: 20vw;
+  border-radius: 10px;
+  background: #d4d4d4;
+  color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ContactFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(700px, 100%);
+  gap: 16px;
+}
+
+.ContactFooter span {
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+.ContactLogo {
+  width: 76px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+@media (max-width: 768px) {
+  .ContactGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ContactFooter {
+    flex-direction: column;
+    align-items: center;
+  }
+}
