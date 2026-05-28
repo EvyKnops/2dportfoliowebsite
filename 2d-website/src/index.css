@@ -1,3 +1,9 @@
+*{
+  box-sizing: border-box; 
+  margin:0;
+  padding: 0;
+}
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -108,4 +114,9 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+.project1{
+  height: 15vh;
+
 }

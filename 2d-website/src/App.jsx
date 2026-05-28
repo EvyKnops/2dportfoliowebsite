@@ -18,17 +18,25 @@ function App() {
       </section>
 
 
-      <section class="SectionProjects">
-        
+      <section className="SectionProjects">
         <h1>Projects</h1>
 
-        <div class="Project1">
-        <p>
-          Project 1
-        </p>
+        <div className="ProjectsList">
+          <div className="ProjectItem">
+            <p>The bottom Line - University of Maastricht</p>
+          </div>
+          <div className="ProjectItem">
+            <p>Vtuber Creation</p>
+          </div>
+          <div className="ProjectItem">
+            <p>3d fishing game</p>
+          </div>
+          <div className="ProjectItem">
+            <p>Branding - Rock acadamy artist</p>
+          </div>
         </div>
-        
-        
+
+        <a href="#" className="ProjectsMore">show more projects</a>
       </section>
 
       <section class="SectionContact">
