@@ -118,6 +118,26 @@ section{
   justify-content: center;
 }
 
+.ContactCard1 .ContactCard2, .ContactCard3 {
+  min-height: 66vh;
+  min-width: 10vw;
+  max-width: 10vw;
+  border-radius: 10px;
+  background: #d4d4d4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.foto1, .foto2 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
 .ContactFooter {
   display: flex;
   align-items: center;

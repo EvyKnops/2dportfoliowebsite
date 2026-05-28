@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import Logo from './assets/logo-geel-blauw.png'
-import heroImg from './assets/hero.png'
+import foto1 from './assets/foto1.jpg'
+import foto2 from './assets/foto2.jpg'
 import './App.css'
 
 function App() {
@@ -43,17 +44,31 @@ function App() {
         <h1>Contact me</h1>
 
         <div className="ContactGrid">
-          <div className="ContactCard">foto</div>
-          <div className="ContactCard">foto</div>
-          <div className="ContactCard">foto</div>
+          <div className="ContactCard">
+          
+            <img src={foto2} className="foto2" alt="foto evy2" />
+          </div>  
+          
+          <div className="ContactCard2">
+            <img src={foto1} className="foto1" alt="foto evy" />
+
+          </div>
+          <div className="ContactCard">
+            
+            <img src={foto2} className="foto2" alt="foto evy2" />
+          </div>
         </div>
 
         <div className="ContactFooter">
-          <span>Linkedin</span>
-          <span className="ContactLogo">
-            <img src={Logo} className="logo" alt="evy logo" />
+          <span>
+            <a href="https://www.linkedin.com/in/evy-knops/" target="_blank" rel="noopener noreferrer">Linkedin</a>
           </span>
-          <span>Email</span>
+          <span className="ContactLogo">
+            <img src={Logo} className="Logo" alt="logo" />
+          </span>
+          <span>
+            <a href="mailto:knopsevy123@gmail.com">Email</a>
+          </span>
         </div>
       </section>
     </>
