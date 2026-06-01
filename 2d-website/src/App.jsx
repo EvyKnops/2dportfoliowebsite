@@ -24,16 +24,20 @@ function App() {
 
         <div className="ProjectsList">
           <div className="ProjectItem">
-            <p>The bottom Line - University of Maastricht</p>
+            <p className="ProjectTitle">The bottom Line - University of Maastricht</p>
+            <p className="ProjectDescription">A brand identity and campaign concept developed for a university initiative, focused on storytelling and visual consistency.</p>
           </div>
           <div className="ProjectItem">
-            <p>Vtuber Creation</p>
+            <p className="ProjectTitle">Vtuber Creation</p>
+            <p className="ProjectDescription">A character design and digital persona project exploring animation, branding, and social presence for a virtual talent.</p>
           </div>
           <div className="ProjectItem">
-            <p>3d fishing game</p>
+            <p className="ProjectTitle">3d fishing game</p>
+            <p className="ProjectDescription">A playful 3D game prototype built around fishing mechanics, environment design, and interactive animation.</p>
           </div>
           <div className="ProjectItem">
-            <p>Branding - Rock acadamy artist</p>
+            <p className="ProjectTitle">Branding - Rock acadamy artist</p>
+            <p className="ProjectDescription">A visual identity system crafted for a rock artist, with logo, color palette, and promotional assets.</p>
           </div>
         </div>
 

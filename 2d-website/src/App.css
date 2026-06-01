@@ -56,12 +56,37 @@ section{
   border-top: 3px solid rgba(255,255,255,0.15);
   border-bottom: 3px solid rgba(255,255,255,0.08);
   padding: 18px 20px;
+  background: rgba(255,255,255,0.02);
+  transition: transform 0.25s ease, padding 0.25s ease, background 0.25s ease;
+  overflow: hidden;
 }
 
-.ProjectItem p {
+.ProjectItem:hover {
+  transform: scale(1.01);
+  padding: 24px 26px;
+  background: rgba(255,255,255,0.08);
+}
+
+.ProjectTitle {
   margin: 0;
   font-size: 1.05rem;
   font-weight: 500;
+}
+
+.ProjectDescription {
+  margin: 12px 0 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  color: rgba(255,255,255,0.78);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  transition: opacity 0.25s ease, max-height 0.25s ease;
+}
+
+.ProjectItem:hover .ProjectDescription {
+  opacity: 1;
+  max-height: 140px;
 }
 
 .ProjectsMore {
