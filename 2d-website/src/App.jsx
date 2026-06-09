@@ -7,6 +7,8 @@ import stylescape from './assets/stylescape.png'
 import brandguide from './assets/borisBrandguide.png'
 import merch from './assets/borisMerch.png'
 import posters from './assets/borisPoster.png'
+import blenderwhite from './assets/blenderwhite.png'
+import blendercolored from './assets/blendercolored.png'
 import './App.css'
 
 const projects = [
@@ -40,12 +42,13 @@ const projects = [
     ],
     tools: 'Krita, Live2d Cubism, VTube Studio',
     videoIds: ['Rn2sVORpfJ8', 'bS94Z3FO1E4'],
+    featured: false,
   },
   {
     slug: 'Leaderboard',
     title: 'Leaderboard - Gamestate',
     summary:
-      'Creating a leaderboard system for multiple arcade games that track player scores',
+      'Creating a singular leaderboard system for multiple arcade games that track player scores',
     description:'In this group project, we developed a leaderboard application that allowed users to view and compare scores and achievements. The project combined UX design, user research, and frontend development to create an engaging user experience.',
     contribution:[
       'Designed the user interface and user experience.',
@@ -55,6 +58,7 @@ const projects = [
       'Collaborated with team members to implement the final product.'
     ],
     tools: 'Figma, HTML, CSS, React, TypeScript',
+    videoIds: ['NwBG9u98qvk'],
   },
   {
     slug: 'rock-academy-branding',
@@ -69,6 +73,21 @@ const projects = [
     ],
     tools: 'Figma, Photopea',
     screenshot: [merch, posters, brandguide],
+  },
+  {
+    slug: '3d-website',
+    title: 'combination 3D Website and 2D website',
+    summary: 'A 3D website prototype blending that has a 2D website inside of it.',
+    description: 'Built a 3D-inspired website using Blender and Three.js. Then I built a 2D website and placed this inside of the 3D website. This is still a work in progress.',
+    contribution: [
+      'Designed 3D model',
+      'Integrated 3D models into the web environment using Three.js.',
+      'Embedded a 2D website within the 3D environment using an iframe,',
+      'https://3dportfolioroom.vercel.app/ (NOT FINISHED)'
+    ],
+    tools: 'Blender, Three.js, React',
+    screenshot: [blenderwhite, blendercolored],
+    videoIds: ['M5c-uaH80X8'],
   },
 ]
 
@@ -124,7 +143,7 @@ function Home() {
         <h1>Projects</h1>
 
         <div className="ProjectsList">
-          {projects.map((project) => (
+          {projects.filter((project) => project.featured !== false).map((project) => (
             <div className="ProjectItem" key={project.slug}>
               <p className="ProjectTitle">
                 <Link className="ProjectTitleLink" to={`/project/${project.slug}`}>
@@ -136,9 +155,44 @@ function Home() {
           ))}
         </div>
 
-        <a href="#" className="ProjectsMore">
+        <Link to="/more-projects" className="ProjectsMore">
           show more projects
-        </a>
+        </Link>
+      </section>
+
+      <SectionContact showImages={true} />
+    </>
+  )
+}
+
+function MoreProjects() {
+  const moreProjects = projects.filter((project) => project.featured === false)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  return (
+    <>
+      <section className="SectionProjects">
+        <h1>More Projects</h1>
+
+        <div className="ProjectsList">
+          {moreProjects.map((project) => (
+            <div className="ProjectItem" key={project.slug}>
+              <p className="ProjectTitle">
+                <Link className="ProjectTitleLink" to={`/project/${project.slug}`}>
+                  {project.title}
+                </Link>
+              </p>
+              <p className="ProjectSummary">{project.summary}</p>
+            </div>
+          ))}
+        </div>
+
+        <Link to="/" className="ProjectsMore">
+          ← Back to main projects
+        </Link>
       </section>
 
       <SectionContact showImages={true} />
@@ -234,6 +288,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/more-projects" element={<MoreProjects />} />
         <Route path="/project/:slug" element={<ProjectDetails />} />
       </Routes>
     </BrowserRouter>
