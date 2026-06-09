@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import Logo from './assets/logo-geel-blauw.png'
 import foto1 from './assets/foto1.jpg'
 import foto2 from './assets/foto2.jpg'
+import stylescape from './assets/stylescape.png'
 import './App.css'
 
 function App() {
@@ -25,7 +26,37 @@ function App() {
         <div className="ProjectsList">
           <div className="ProjectItem">
             <p className="ProjectTitle">The bottom Line - University of Maastricht</p>
-            <p className="ProjectDescription">A brand identity and campaign concept developed for a university initiative, focused on storytelling and visual consistency.</p>
+            <div className="ProjectDescription">
+              <h3>Project Description</h3>
+              <p>
+                The Bottom Line was a group project in which we transformed an existing physical board game into a digital experience. The goal was to preserve the core gameplay mechanics and user experience of the original game while adapting it for a digital platform. The project focused on usability, interaction design, and frontend development.
+              </p>
+
+              <h3>My Contribution</h3>
+              <ul>
+                <li>Designed the user interface in Figma.</li>
+                <li>Conducted usability tests to validate and improve the designs.</li>
+                <li>Iterated on the designs based on user feedback.</li>
+                <li>Developed frontend features using TypeScript.</li>
+                <li>Collaborated with team members to align design and development decisions.</li>
+              </ul>
+
+              <h3>Tools</h3>
+              <p>Figma, TypeScript</p>
+
+              <div className="ProjectMedia">
+                <div className="ProjectVideo">
+                  <iframe
+                    src="https://www.youtube.com/embed/KMpad-OTkJU"
+                    title="Project video"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+                <img src={stylescape} alt="bottom line screenshot" />
+              </div>
+            </div>
           </div>
           <div className="ProjectItem">
             <p className="ProjectTitle">Vtuber Creation</p>
